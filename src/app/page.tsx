@@ -13,6 +13,11 @@ const assignments = [
     description:
       "object 형식의 데이터를 직접 만들어 보고, 그 데이터를 이용해서 프로필 카드 만들기",
   },
+  {
+    order: 3,
+    title: "카운터 만들기",
+    description: "useState를 사용하여 카운터 만들기",
+  },
 ];
 
 export default function Home() {
