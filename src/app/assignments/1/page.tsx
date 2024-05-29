@@ -1,5 +1,16 @@
 import Header from "@/components/header";
 
+function 상품(props:{imageSrc:string,title:string,price:number}){
+  return(
+    <div className="rounded-md bg-white w-52 h-72 border p-3 gap-1 flex flex-col">
+      {props.imageSrc!=""?<img src={props.imageSrc}></img>:<BlankProductImage/>}
+    <div className="h-12 max-h-12 overflow-hidden">{props.title}</div>
+    <div className="font-bold">{props.price}</div>
+    {/* --- 윗 줄까지 --- */}
+  </div>
+  )
+ }
+
 export default function Assignment1() {
   const product = {
     imageSrc: "",
@@ -21,23 +32,19 @@ export default function Assignment1() {
     }
   ]
 
- function 상품(props:{imageSrc:string,title:string,price:number}){
-  return(
-    <div className="rounded-md bg-white w-52 h-72 border p-3 gap-1 flex flex-col">
-      {props.imageSrc!=""?<img src={props.imageSrc}></img>:<BlankProductImage/>}
-    <div className="h-12 max-h-12 overflow-hidden">{props.title}</div>
-    <div className="font-bold">{props.price}</div>
-    {/* --- 윗 줄까지 --- */}
-  </div>
-  )
- }
+  // function 상품을만드는함수() {
+    
+  //   return <상품></상품>
+  // }
+ // 
+ //
 
   return (
     <>
       <Header title={"상품 목록 만들기"} hasBack={true} />
       <div className="w-full h-full flex flex-col overflow-y-auto py-5 px-5 gap-5 scrollbar-hide">
         <div className="w-full gap-4 grid grid-cols-2">
-         {products.map(상품)}
+         {/* {products.map(상품을만드는함수)} */}
         </div>
       </div>
     </>
